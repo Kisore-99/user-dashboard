@@ -1,0 +1,55 @@
+.side-nav{
+    display: flex;
+    height: 100vh;
+    background-color: #fff;
+    width: 24.3vw;
+    border: 1px solid #333;
+    margin: 0;
+    overflow: hidden;
+    overflow-y: scroll;
+    
+}
+.side-nav .title{
+    display: flex;
+    font-size: 1rem;
+    color: #333;
+    text-transform: uppercase;
+    justify-content: center;
+    margin-left: 2rem;
+}
+
+.delete{
+    height: 40px;
+    width: 70px;
+    margin-top: 30px;
+    margin-left: 30px;
+}
+
+.users{
+    margin-top: 5rem;
+}
+
+.user-names{
+    margin-top: -25px;
+    margin-left: 8rem;
+    text-decoration: none;
+}
+
+.names{
+
+    /* display: flex;
+    align-items: flex-start;
+    justify-content: flex-start; */
+    
+    list-style-type: none;
+    padding: 2px;
+    margin: 0;
+    font-size: 15px;
+    border: 1px solid #333;
+    width: 56vh;
+    height:  7vh;
+    padding: 11px;  
+    margin-bottom: 1rem;
+    margin-left: -200px; 
+}
+
