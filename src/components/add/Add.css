@@ -1,6 +1,8 @@
+
+
 .open{
     position: absolute;
-    display: inline-block;
+    display: block;
     top: 0;
     right: 0;
     height: 6vh;
@@ -8,11 +10,13 @@
     border-radius: 100%;
     text-decoration: none;
     text-align: center;
+    outline: none;
+    overflow: none;
+    border-style: none;
     background-color: rgb(38, 38, 158);
-    border: hidden;
+    border: none;
     color: #fff;
 }
-
 
 
 

@@ -2,7 +2,7 @@
     display: flex;
     height: 100vh;
     background-color: #fff;
-    width: 24vw;
+    width: 27vw;
     border: 1px solid #333;
     margin: 5px;;
     overflow-y: scroll;
@@ -32,9 +32,10 @@
     margin-left: -4rem;
 }
 .user-names{
+    
     margin-top: -25px;
     margin-left: 3rem;
-    font-size: 1.2rem;
+    font-size: 1rem;
     text-transform: uppercase;
     text-decoration: none;
 }
@@ -62,3 +63,9 @@
     margin-bottom: 100px;
     margin-left: 40px;
 } */
+
+.chk-box{
+    height: 1rem;
+    width: 1rem;
+
+}

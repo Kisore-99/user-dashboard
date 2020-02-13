@@ -52,7 +52,8 @@ class Add extends Component {
             open(this.id);
           }}
         >
-             +
+         +
+             
         </button>
         <p />
        

@@ -1,9 +1,12 @@
+body{
+  overflow: hidden;
+}
 .user-info{
     display: flex;
     align-items: center;
     justify-content: center;
     margin-top: 20rem;
- 
+  
 }
 .details{
   /* display: block; */

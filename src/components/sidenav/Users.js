@@ -152,6 +152,8 @@ console.log(data);
         });
         this.props.history.push('/')
       };
+
+      
     render(){
         
         console.log(this.state.users);
@@ -169,7 +171,7 @@ console.log(data);
                 />
 
                 <h2 className="title" style={{color: 'black'}}>People</h2>
-        <button style={{marginTop: '15px', height: '10px'}}  className="btn" onClick={this.handleDel}><FontAwesomeIcon icon={faTrash}/></button>
+                 <button style={{marginTop: '15px', height: '10px'}}  className="btn" onClick={this.handleDel}><FontAwesomeIcon icon={faTrash}/></button>
 
                 {/* <Button onClick={() => {this.handleDel(u)}}>Delete</Button> */}
                 <div className="users">
