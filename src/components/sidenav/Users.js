@@ -114,24 +114,44 @@ console.log(data);
     //     this.props.addUser(user);
     //     // console.log(user)
     // }   s
-    onChangeBox = item => {
-        this.setState(({ users }) => ({
-          users: users.map(user =>
-            user.id === item.id ? { ...user, isChecked: !user.isChecked } : user
-          )
-        }));
-      };
+    // onChangeBox = item => {
+    //     this.setState(({ users }) => ({
+    //       users: users.map(user =>
+    //         user.id === item.id ? { ...user, isChecked: !user.isChecked } : user
+    //       )
+    //     }));
+    //   };
     
-      handleDel = item => {
-        this.setState(({ users }) => ({
+    //   handleDel = item => {
+    //     this.setState(({ users }) => ({
             
-        //   users: users.filter(user => user.id !== item.id),
-          users: users.filter((user => user.isChecked === false) )
+    //     //   users: users.filter(user => user.id !== item.id),
+    //       users: users.filter((user =>  user.isChecked === false ) )
      
-        }));
-        this.props.history.push('/')
+    //     }));
+    //     this.props.history.push('/')
+    //   };s
+    onChangeBox = e => {
+        const id = e.target.id;
+        console.log(id)
+        this.setState(prevState => {
+          return {
+            users: prevState.users.map(u => (parseInt(u.id) === +id ? { ...u, isChecked: !u.isChecked} : u))
+          };
+        });
+        console.log(this.state.users)
+
       };
 
+
+      handleDel = () => {
+        this.setState(prevState => {
+          return {
+            users: prevState.users.filter(u => !u.isChecked)
+          };
+        });
+        this.props.history.push('/')
+      };
     render(){
         
         console.log(this.state.users);
@@ -149,6 +169,8 @@ console.log(data);
                 />
 
                 <h2 className="title" style={{color: 'black'}}>People</h2>
+        <button style={{marginTop: '15px', height: '10px'}}  className="btn" onClick={this.handleDel}><FontAwesomeIcon icon={faTrash}/></button>
+
                 {/* <Button onClick={() => {this.handleDel(u)}}>Delete</Button> */}
                 <div className="users">
             
@@ -159,12 +181,19 @@ console.log(data);
                                 return (
                                     <div className="names" >
                                 
-                                        <Checkbox
+                                        {/* <Checkbox
                                                 onClick={() =>{this.onChangeBox(u)}}
                                                 defaultChecked={u.isChecked}
-                                        />{" "}
+                                        />{" "} */}
+                                        <input
+                                        className="chk-box"
+                                        type="checkbox"
+                                        id={u.id}
+                                        checked={u.isChecked}
+                                        onClick={this.onChangeBox}
+                                        />
                                             
-                                                <Button onClick={() => {this.handleDel(u)}}><FontAwesomeIcon icon={faTrash} /></Button>
+                                                {/* <Button onClick={() => {this.handleDel(u)}}><FontAwesomeIcon icon={faTrash} /></Button> */}
                                                 <Link style={{textDecoration: 'none'}} to= {{
                                                 pathname: `/user/${u.id}`,
                                                 state: {
