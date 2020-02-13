@@ -125,12 +125,9 @@ console.log(data);
       handleDel = item => {
         this.setState(({ users }) => ({
             
-          users: users.filter(user => user.id !== item.id),
-        //   users: users.filter(function(user){
-        //       if(user.id === item.id){
-        //         users: users.filter(user => user.isChecked === false)   
-        //       }
-        //   })
+        //   users: users.filter(user => user.id !== item.id),
+          users: users.filter((user => user.isChecked === false) )
+     
         }));
         this.props.history.push('/')
       };
@@ -165,9 +162,9 @@ console.log(data);
                                         <Checkbox
                                                 onClick={() =>{this.onChangeBox(u)}}
                                                 defaultChecked={u.isChecked}
-                                                />{" "}
+                                        />{" "}
                                             
-                                                    <Button onClick={() => {this.handleDel(u)}}><FontAwesomeIcon icon={faTrash} /></Button>
+                                                <Button onClick={() => {this.handleDel(u)}}><FontAwesomeIcon icon={faTrash} /></Button>
                                                 <Link style={{textDecoration: 'none'}} to= {{
                                                 pathname: `/user/${u.id}`,
                                                 state: {
